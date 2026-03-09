@@ -23,12 +23,12 @@ jobs:
 
       - name: Install frontend dependencies
         run: |
-          cd frontend
+          cd front
           npm install
 
       - name: Run frontend tests
         run: |
-          cd frontend
+          cd front
           npm test -- --watchAll=false
 
       # BACKEND
@@ -39,12 +39,12 @@ jobs:
 
       - name: Install backend dependencies
         run: |
-          cd backend
+          cd back
           pip install -r requirements.txt
 
       - name: Run backend tests
         run: |
-          cd backend
+          cd back
           pytest
 
 
@@ -69,7 +69,7 @@ jobs:
           host: ${{ secrets.EC2_FRONTEND_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "frontend/build/*"
+          source: "front/*"
           target: ${{ secrets.FRONTEND_PATH }}
 
       - name: Restart Frontend Service
@@ -97,7 +97,7 @@ jobs:
           host: ${{ secrets.EC2_BACKEND_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "backend/*"
+          source: "back/*"
           target: ${{ secrets.BACKEND_PATH }}
 
       - name: Install dependencies and restart API
