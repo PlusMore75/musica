@@ -80,7 +80,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo systemctl restart nginx
+            npm install -g serve
+            serve -s build -l 3000
 
 
   deploy-backend:
