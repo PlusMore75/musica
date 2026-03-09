@@ -1,0 +1,105 @@
+/* Fondo general */
+body {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+  padding: 40px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #ffd000;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* Subtítulos */
+h2 {
+  color: #ffd000;
+  margin-bottom: 15px;
+}
+
+/* Tarjetas de cada sección */
+.section {
+  background-color: #1b1b1b;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 208, 0, 0.15);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffd000;
+  box-shadow: 0 0 5px #ffd000;
+}
+
+/* Botones */
+button {
+  background-color: #ffd000;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #ffea70;
+  transform: scale(1.05);
+}
+
+/* Lista de resultados */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background-color: #141414;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #ffd000;
+}
+
+/* Mensajes */
+p {
+  margin-top: 10px;
+}
+
+/* Mensajes de error */
+.error {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Mensajes de éxito */
+.success {
+  color: #4cff88;
+  font-weight: bold;
+}
