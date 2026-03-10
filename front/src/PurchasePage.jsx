@@ -9,7 +9,7 @@ export default function PurchasePage({ selectedTracks = [], removeTrack }) {
   const [loading, setLoading] = useState(false);
 
   const total = selectedTracks.reduce(
-    (sum, track) => Number(track.UnitPric || 0),
+    (sum, track) => sum + Number(track.UnitPrice || 0),
     0
   );
 
