@@ -48,18 +48,3 @@ jobs:
           source env.sh
           pytest
 
-
-  deploy-frontend:
-    needs: test
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Build React
-        run: |
-          cd front
-          npm install
-          npm run build
