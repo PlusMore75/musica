@@ -34,6 +34,7 @@ export default function PurchasePage({ selectedTracks = [], removeTrack }) {
       for (const track of selectedTracks) {
         await purchase({
           customer_id: Number(customerId),
+          track_id: Number(track.TrackId)
         });
       }
 
