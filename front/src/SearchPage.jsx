@@ -3,7 +3,6 @@ import { searchTracks } from "./api";
 
 export default function SearchPage({ onSelectTrack }) {
 
-  const [name, setName] = useState("");
   const [artist, setArtist] = useState("");
   const [genre, setGenre] = useState("");
   const [results, setResults] = useState([]);
